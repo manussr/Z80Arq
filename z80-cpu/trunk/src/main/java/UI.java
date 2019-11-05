@@ -162,14 +162,17 @@ public class UI extends JFrame{
 		
 		public JToolBar getToolBar() {
 	        toolbar = new JToolBar();
-	        iniciar=new JButton("Iniciar simulacion");
+	        iniciar=new JButton();
 	        reset=new JButton("Reiniciar simulacion");
 	        stop=new JButton("Parar simulacion");
 	        toolbar.add(iniciar);
 	        toolbar.add(reset);
-	        toolbar.add(stop);
+	       // toolbar.add(stop);
 	        //Añadiendo los action listener
 	        iniciar.setAction(new InicioSwingWorker(this));
+	        iniciar.setText("Iniciar simulacion");
+	        reset.setAction(new ResetSwingWorker(this));
+	        reset.setText("Reiniciar simulacion");
 	        //reset.setAction();
 	        //stop.setAction();
 	        return toolbar;

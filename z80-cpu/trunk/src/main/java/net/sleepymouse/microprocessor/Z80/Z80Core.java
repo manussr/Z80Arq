@@ -456,7 +456,7 @@ public class Z80Core implements ICPUData
 		//
 		tStates = 0;
 	}
-
+	
 	/**
 	 * Reset the processor to a known state. Equivalent to a hardware reset.
 	 */
